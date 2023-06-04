@@ -1,3 +1,4 @@
 ## 0.0.1
 
-* TODO: Describe initial release.
+* Wave Bottom Navigation Bar first release.
+* It is simple package wherein you use wave bottom bar.
