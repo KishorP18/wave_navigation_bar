@@ -49,20 +49,7 @@ class _MyHomePageState extends State<MyHomePage> {
         body: Container(
           color: Colors.blueAccent,
           child: Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Text(_currentPage.toString(), textScaleFactor: 10.0),
-                ElevatedButton(
-                  child: Text('Go To Page of index 1'),
-                  onPressed: () {
-                    final navBarState =
-                        _bottomNavigationKey.currentState;
-                    navBarState?.setPage(1);
-                  },
-                )
-              ],
-            ),
+            child:   Text(_currentPage.toString(), textScaleFactor: 10.0),
           ),
         ),
 
@@ -88,7 +75,9 @@ class _MyHomePageState extends State<MyHomePage> {
             Icon(
                 Icons.history,size: 30,),
             Icon(
-                Icons.person_pin,size: 30,),
+                Icons.feed,size: 30,),
+            Icon(
+              Icons.person_pin,size: 30,),
           ],
         ),
       );

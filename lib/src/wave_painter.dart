@@ -105,7 +105,7 @@ class WavePainter extends CustomPainter {
       ..lineTo(size.width, size.height)
       ..close();
 
-    if(_l <= 0.03){
+    if(_startingLoc <= 0.0){
 
       canvas.drawPath(startPath, paint);
     }else if(_l >= 0.7){
