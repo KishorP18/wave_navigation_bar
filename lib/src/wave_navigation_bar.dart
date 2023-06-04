@@ -3,7 +3,7 @@ import 'package:wave_navigation_bar/src/wav_nav_item.dart';
 import 'package:wave_navigation_bar/src/wave_painter.dart';
 
 
-typedef _LetIndexPage = bool Function(int value);
+
 
 class WaveNavigationBar extends StatefulWidget {
   final List<Widget> items;
@@ -12,7 +12,6 @@ class WaveNavigationBar extends StatefulWidget {
   final Color? buttonBackgroundColor;
   final Color backgroundColor;
   final ValueChanged<int>? onChanged;
-  final _LetIndexPage letIndexChange;
   final Curve animationCurve;
   final Duration animationDuration;
   final double height;
@@ -25,13 +24,12 @@ class WaveNavigationBar extends StatefulWidget {
     this.buttonBackgroundColor,
     this.backgroundColor = Colors.blueAccent,
     this.onChanged,
-    _LetIndexPage? letIndexChange,
     this.animationCurve = Curves.easeOut,
     this.animationDuration = const Duration(milliseconds: 600),
     this.height = 75.0,
-  })  : letIndexChange = letIndexChange ?? ((_) => true),
+  })  :
         assert(items != null),
-        assert(items.length >= 1),
+        assert(items.isNotEmpty),
         assert(0 <= index && index < items.length),
         assert(0 <= height && height <= 75.0),
         super(key: key);
@@ -167,9 +165,6 @@ class WaveNavigationBarState extends State<WaveNavigationBar>
   }
 
   void _buttonTap(int index) {
-    if (!widget.letIndexChange(index)) {
-      return;
-    }
     if (widget.onChanged != null) {
       widget.onChanged!(index);
     }

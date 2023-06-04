@@ -27,7 +27,7 @@ class WaveNavItem extends StatelessWidget {
         onTap: () {
           onTap(index);
         },
-        child: Container(
+        child:SizedBox(
             height: 75.0,
             child: Transform.translate(
               offset: Offset(
