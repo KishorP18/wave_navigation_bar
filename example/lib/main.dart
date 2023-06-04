@@ -56,7 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
         bottomNavigationBar: WaveNavigationBar(
           key: _bottomNavigationKey,
           index: 0,
-          height: 75.0,
+          height: 60.0,
           selectedIconBackgrounColor: Colors.black,
           buttonBackgroundColor: Colors.white,
           backgroundColor: Colors.transparent,
